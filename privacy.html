@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Circle Social</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <meta name="description" content="Circle Social Privacy Policy">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #ffffff;
+      --bg-secondary: #f5f5f5;
+      --text: #000000;
+      --text-secondary: #666666;
+      --text-tertiary: #999999;
+      --border: #e0e0e0;
+      --primary: #000000;
+      --primary-text: #ffffff;
+      --link: #007aff;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #000000;
+        --bg-secondary: #1c1c1e;
+        --text: #ffffff;
+        --text-secondary: #a0a0a0;
+        --text-tertiary: #666666;
+        --border: #38383a;
+        --primary: #ffffff;
+        --primary-text: #000000;
+        --link: #0a84ff;
+      }
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .nav-logo {
+      width: 32px;
+      height: 32px;
+    }
+
+    .nav-logo.light { display: block; }
+    .nav-logo.dark { display: none; }
+
+    @media (prefers-color-scheme: dark) {
+      .nav-logo.light { display: none; }
+      .nav-logo.dark { display: block; }
+    }
+
+    .nav-brand span {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-secondary);
+      font-size: 15px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    /* POLICY CONTENT */
+    .policy {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 80px 24px 60px;
+    }
+
+    .policy h1 {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      margin-top: 24px;
+    }
+
+    .effective-date {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-bottom: 32px;
+    }
+
+    .policy-intro {
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+
+    .policy h2 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-top: 36px;
+      margin-bottom: 12px;
+    }
+
+    .policy h3 {
+      font-size: 17px;
+      font-weight: 600;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    .policy p {
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    .policy ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 12px;
+    }
+
+    .policy ul li {
+      font-size: 15px;
+      line-height: 1.7;
+      padding-left: 20px;
+      position: relative;
+      margin-bottom: 6px;
+    }
+
+    .policy ul li::before {
+      content: "\2022";
+      position: absolute;
+      left: 4px;
+    }
+
+    .policy a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    .policy a:hover {
+      text-decoration: underline;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 24px;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 14px;
+      color: var(--text-tertiary);
+    }
+
+    footer a {
+      color: var(--text-secondary);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: var(--text);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .policy h1 {
+        font-size: 28px;
+      }
+
+      .nav-links {
+        gap: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .nav-brand span {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="nav-brand">
+        <img src="logo-light.png" alt="" class="nav-logo light">
+        <img src="logo-dark.png" alt="" class="nav-logo dark">
+        <span>Circle Social</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="policy">
+    <h1>Privacy Policy</h1>
+    <p class="effective-date">Effective date: January 14, 2026</p>
+
+    <div class="policy-intro">
+      <p>App / Service: Circle Social ("we," "us," "our")</p>
+      <p>Contact: <a href="mailto:contact@circlesocial.online">contact@circlesocial.online</a></p>
+      <p>This Privacy Policy explains how Circle Social collects, uses, discloses, and protects information when you use our mobile application, website, and related services (collectively, the "Service").</p>
+      <p>By using the Service, you agree to the practices described in this Privacy Policy.</p>
+    </div>
+
+    <h2>1) Information We Collect</h2>
+
+    <h3>A. Information you provide</h3>
+    <p>We may collect information you provide directly, including:</p>
+    <ul>
+      <li>Account information: username, email, password (stored in hashed form), phone number (if provided), profile photo, bio.</li>
+      <li>User content: posts, comments, likes, messages, media you upload, and any other content you submit.</li>
+      <li>Contacts you choose to sync: if you opt in, we may collect and process contact identifiers to help you find friends.</li>
+      <li>Support and communications: messages to customer support, feedback, survey responses.</li>
+    </ul>
+
+    <h3>B. Information collected automatically</h3>
+    <p>When you use the Service, we may automatically collect:</p>
+    <ul>
+      <li>Device and usage data: device type, operating system, app version, language, IP address, approximate location (derived from IP), logs, crash reports, and analytics events.</li>
+      <li>Identifiers: advertising IDs and similar identifiers (where permitted by law and your device settings).</li>
+      <li>Cookies and similar technologies: if you use our website (and in some cases in-app webviews).</li>
+    </ul>
+
+    <h3>C. Information from third parties (optional)</h3>
+    <p>If you connect third-party services (e.g., sign-in providers like Apple/Google, or share to other platforms), we may receive information from them, such as your name, email, and profile picture, depending on your settings and the provider.</p>
+
+    <h2>2) How We Use Information</h2>
+    <p>We use information to:</p>
+    <ul>
+      <li>Provide and operate the Service (create accounts, enable posting, messaging, feeds, recommendations).</li>
+      <li>Personalize your experience (suggest content, accounts, and features).</li>
+      <li>Maintain safety and integrity (moderation, spam/fraud prevention, enforcing rules).</li>
+      <li>Communicate with you (service updates, security alerts, support responses).</li>
+      <li>Improve the Service (analytics, debugging, research and development).</li>
+      <li>Comply with legal obligations and respond to lawful requests.</li>
+    </ul>
+    <p>Legal bases (where applicable): We process information based on performance of a contract (providing the Service), legitimate interests (security, improvement), your consent (optional features like contact syncing), and legal obligations.</p>
+
+    <h2>3) How We Share Information</h2>
+    <p>We may share information in the following circumstances:</p>
+
+    <h3>A. Public and social sharing</h3>
+    <ul>
+      <li>Public content: If your profile or posts are public, your content and certain profile information may be visible to anyone.</li>
+      <li>Followers and communities: If you post in groups, comment, like, or interact, those actions may be visible based on your settings.</li>
+      <li>Search and discovery: Your profile and content may be discoverable in-app, and (if you enable it or we support it) by search engines.</li>
+    </ul>
+
+    <h3>B. Service providers</h3>
+    <p>We share information with vendors who process data on our behalf (e.g., hosting, analytics, customer support, content delivery, moderation tools). They are authorized to use information only as needed to provide services to us.</p>
+
+    <h3>C. Affiliates (optional)</h3>
+    <p>We may share information with our affiliates (entities under common ownership) for purposes consistent with this Policy.</p>
+
+    <h3>D. Legal, safety, and enforcement</h3>
+    <p>We may disclose information if we believe it's required to:</p>
+    <ul>
+      <li>comply with law or valid legal process,</li>
+      <li>protect the rights, safety, and security of our users, the public, and the Service,</li>
+      <li>investigate or prevent fraud, abuse, or violations of our Terms.</li>
+    </ul>
+
+    <h3>E. Business transfers</h3>
+    <p>If we're involved in a merger, acquisition, financing, reorganization, or sale of assets, information may be transferred as part of that transaction.</p>
+
+    <h3>F. With your consent</h3>
+    <p>We may share information for other purposes when you explicitly consent.</p>
+
+    <h2>4) Ads, Analytics, and Tracking</h2>
+    <p>We may use analytics to understand usage and improve the Service, but we do not sell personal information or use targeted advertising based on third-party tracking.</p>
+
+    <h2>5) Content Moderation and Safety</h2>
+    <p>We may use automated tools and human review to detect, investigate, and remove content or behavior that violates our Terms or policies. This may include analyzing content metadata and user reports.</p>
+
+    <h2>6) Data Retention</h2>
+    <p>We keep information for as long as necessary to provide the Service and for legitimate business and legal purposes. Retention periods depend on:</p>
+    <ul>
+      <li>the type of data,</li>
+      <li>whether you've requested deletion,</li>
+      <li>whether we must retain data for legal or security reasons.</li>
+    </ul>
+    <p>When you delete content, we will remove it from public view and delete or de-identify it within a reasonable period, unless retention is required by law or for safety/security purposes.</p>
+
+    <h2>7) Your Choices and Rights</h2>
+    <p>Depending on your location, you may have rights to:</p>
+    <ul>
+      <li>Access your information,</li>
+      <li>Correct inaccurate information,</li>
+      <li>Delete your account or certain data,</li>
+      <li>Object or restrict certain processing,</li>
+      <li>Port your data,</li>
+      <li>Withdraw consent where processing is based on consent.</li>
+    </ul>
+
+    <h3>Account controls</h3>
+    <p>You can typically:</p>
+    <ul>
+      <li>update profile info in settings,</li>
+      <li>change privacy settings (public/private),</li>
+      <li>control notifications,</li>
+      <li>request account deletion in your profile settings.</li>
+    </ul>
+    <p>To exercise rights, contact us at <a href="mailto:contact@circlesocial.online">contact@circlesocial.online</a>. We may need to verify your identity.</p>
+
+    <h2>8) Children's Privacy</h2>
+    <p>The Service is not intended for children under 13. We do not knowingly collect personal information from children under that age. If you believe a child has provided personal information, contact us and we will take appropriate action.</p>
+
+    <h2>9) International Data Transfers</h2>
+    <p>We may process and store information in countries other than your own, including the United States, where data protection laws may differ. Where required, we use appropriate safeguards for cross-border transfers.</p>
+
+    <h2>10) Security</h2>
+    <p>We use reasonable administrative, technical, and organizational measures to protect information. However, no system is 100% secure, and we cannot guarantee absolute security.</p>
+
+    <h2>11) Third-Party Links and Services</h2>
+    <p>The Service may contain links to third-party websites or integrations. We are not responsible for their privacy practices. Review their policies before providing information.</p>
+
+    <h2>12) Changes to This Privacy Policy</h2>
+    <p>We may update this Privacy Policy from time to time. We will post the updated policy and update the "Effective date." If changes are material, we may provide additional notice (e.g., in-app notification).</p>
+
+    <h2>13) Contact Us</h2>
+    <p>Questions or requests:</p>
+    <p>Email: <a href="mailto:contact@circlesocial.online">contact@circlesocial.online</a></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Circle Social &middot; <a href="mailto:contact@circlesocial.online">contact@circlesocial.online</a> &middot; <a href="/privacy.html">Privacy Policy</a></p>
+  </footer>
+
+</body>
+</html>
