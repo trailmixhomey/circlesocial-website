@@ -236,7 +236,7 @@
     }
 
     .contact-inner {
-      max-width: 520px;
+      max-width: 640px;
       margin: 0 auto;
       text-align: center;
     }
@@ -247,10 +247,157 @@
       margin-bottom: 12px;
     }
 
-    .contact > .contact-inner > p {
+    .support-header p {
       color: var(--text-secondary);
       font-size: 16px;
+      margin-bottom: 0;
+    }
+
+    .support-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .support-email {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 24px;
+      margin-top: 20px;
+      font-size: 16px;
+      color: var(--text);
+      text-decoration: none;
+      transition: border-color 0.2s;
+    }
+
+    .support-email:hover {
+      border-color: var(--primary);
+    }
+
+    .support-email svg {
+      width: 20px;
+      height: 20px;
+      fill: none;
+      stroke: var(--text-secondary);
+      stroke-width: 1.5;
+    }
+
+    .faq-section {
+      max-width: 640px;
+      margin: 0 auto 60px;
+      text-align: left;
+    }
+
+    .faq-section h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      margin-top: 36px;
+    }
+
+    .faq-section h3:first-child {
+      margin-top: 0;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-item:first-of-type {
+      border-top: 1px solid var(--border);
+    }
+
+    .faq-question {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 16px 0;
+      background: none;
+      border: none;
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text);
+      cursor: pointer;
+      text-align: left;
+      line-height: 1.4;
+    }
+
+    .faq-question::after {
+      content: "+";
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--text-tertiary);
+      margin-left: 16px;
+      flex-shrink: 0;
+    }
+
+    .faq-item.open .faq-question::after {
+      content: "\2212";
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .faq-item.open .faq-answer {
+      max-height: 500px;
+    }
+
+    .faq-answer-inner {
+      padding-bottom: 16px;
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--text-secondary);
+    }
+
+    .faq-answer-inner a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    .faq-answer-inner a:hover {
+      text-decoration: underline;
+    }
+
+    .faq-answer-inner ul {
+      list-style: none;
+      padding: 0;
+      margin: 8px 0;
+    }
+
+    .faq-answer-inner ul li {
+      padding-left: 20px;
+      position: relative;
+      margin-bottom: 4px;
+    }
+
+    .faq-answer-inner ul li::before {
+      content: "\2022";
+      position: absolute;
+      left: 4px;
+    }
+
+    .contact-divider {
+      text-align: center;
       margin-bottom: 36px;
+    }
+
+    .contact-divider h3 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .contact-divider p {
+      font-size: 15px;
+      color: var(--text-secondary);
     }
 
     .contact-form {
@@ -380,6 +527,10 @@
         gap: 16px;
       }
 
+      .faq-section {
+        margin-bottom: 40px;
+      }
+
       .nav-links {
         gap: 20px;
       }
@@ -407,7 +558,7 @@
       </a>
       <ul class="nav-links">
         <li><a href="#features">Features</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#contact">Support</a></li>
         <li><a href="/privacy.html">Privacy</a></li>
       </ul>
     </div>
@@ -450,9 +601,101 @@
 
   <section class="contact" id="contact">
     <div class="contact-inner">
-      <h2>Get in Touch</h2>
-      <p>Questions, feedback, or just want to say hi? We'd love to hear from you.</p>
-      <form class="contact-form" id="contactForm">
+
+      <div class="support-header">
+        <h2>Support</h2>
+        <p>Need help with Circle Social? Find answers below or reach out to our team.</p>
+        <a href="mailto:contact@circlesocial.online" class="support-email">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="4" width="20" height="16" rx="3"/><polyline points="2,4 12,13 22,4"/></svg>
+          contact@circlesocial.online
+        </a>
+      </div>
+
+      <div class="faq-section">
+
+        <h3>Getting Started</h3>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">What is Circle Social?</button>
+          <div class="faq-answer"><div class="faq-answer-inner">
+            Circle Social is a private photo and video sharing app for families and close friends. Create invite-only groups, share moments, comment, and stay connected with the people who matter most &mdash; with no ads, no algorithms, and no strangers.
+          </div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">How do I create or join a group?</button>
+          <div class="faq-answer"><div class="faq-answer-inner">
+            To create a group, tap the <strong>+</strong> button on the Groups screen and give your group a name. To join an existing group, ask a member to send you an invite link &mdash; groups are invite-only to keep them private.
+          </div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">How do I share photos and videos?</button>
+          <div class="faq-answer"><div class="faq-answer-inner">
+            Open a group and tap the create-post button. You can select photos and videos from your library, add a caption, and share them with the group. All members of the group will be able to see, comment on, and react to your post.
+          </div></div>
+        </div>
+
+        <h3>Account Management</h3>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">How do I edit my profile?</button>
+          <div class="faq-answer"><div class="faq-answer-inner">
+            Go to the <strong>Profile</strong> tab, then tap <strong>Edit Profile</strong>. You can update your display name, username, bio, and profile photo.
+          </div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">How do I delete my account?</button>
+          <div class="faq-answer"><div class="faq-answer-inner">
+            Go to the <strong>Profile</strong> tab, tap the menu icon in the top right, and select <strong>Delete Account</strong>. You will be asked to confirm by typing DELETE. This action is permanent &mdash; all your posts, comments, and data will be permanently removed. You can also request account deletion by emailing <a href="mailto:contact@circlesocial.online">contact@circlesocial.online</a>.
+          </div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">How do I change my notification settings?</button>
+          <div class="faq-answer"><div class="faq-answer-inner">
+            Push notification permissions are managed through your device settings. Go to <strong>Settings &gt; Notifications &gt; Circle Social</strong> on your iPhone to enable or disable notifications.
+          </div></div>
+        </div>
+
+        <h3>Safety & Content</h3>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">How do I report inappropriate content?</button>
+          <div class="faq-answer"><div class="faq-answer-inner">
+            Tap the <strong>&hellip;</strong> menu on any post or comment, then select <strong>Report</strong>. You can choose a reason (spam, harassment, inappropriate content, or other) and add details. Our team reviews all reports and takes action as needed. You can also report content by emailing <a href="mailto:contact@circlesocial.online">contact@circlesocial.online</a>.
+          </div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">How do I block a user?</button>
+          <div class="faq-answer"><div class="faq-answer-inner">
+            Visit the user's profile and tap the menu icon, then select <strong>Block</strong>. Blocked users will no longer be able to see your content or interact with you. You can view and manage your blocked users from <strong>Profile &gt; Menu &gt; Blocked Users</strong>.
+          </div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">What happens when I block someone?</button>
+          <div class="faq-answer"><div class="faq-answer-inner">
+            When you block a user:
+            <ul>
+              <li>They can no longer see your posts or profile</li>
+              <li>Their posts and comments are hidden from you</li>
+              <li>They cannot interact with your content</li>
+              <li>You can unblock them at any time from your Blocked Users list</li>
+            </ul>
+          </div></div>
+        </div>
+
+      </div>
+
+      <div class="contact-divider">
+        <h3>Still need help?</h3>
+        <p>Send us a message and we'll get back to you as soon as possible.</p>
+      </div>
+
+      <form class="contact-form" id="contactForm" style="max-width: 520px; margin: 0 auto;">
         <div class="form-group">
           <label for="name">Name</label>
           <input type="text" id="name" name="name" placeholder="Your name" required>
@@ -463,11 +706,12 @@
         </div>
         <div class="form-group">
           <label for="message">Message</label>
-          <textarea id="message" name="message" placeholder="What's on your mind?" required></textarea>
+          <textarea id="message" name="message" placeholder="Describe your issue or question..." required></textarea>
         </div>
         <button type="submit" class="submit-btn" id="submitBtn">Send Message</button>
         <div class="form-status" id="formStatus"></div>
       </form>
+
     </div>
   </section>
 
@@ -479,6 +723,21 @@
     const form = document.getElementById('contactForm');
     const status = document.getElementById('formStatus');
     const submitBtn = document.getElementById('submitBtn');
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var item = btn.parentElement;
+        var isOpen = item.classList.contains('open');
+        if (isOpen) {
+          item.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+        } else {
+          item.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
 
     form.addEventListener('submit', function(e) {
       e.preventDefault();
